@@ -5,7 +5,7 @@ body {
   max-width: 900px;
   margin: auto;
 
-  background: url('shooting star.png') no-repeat center center fixed;
+  background: url('shooting star.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #e4e4e4;
   position: relative;
@@ -29,7 +29,15 @@ header {
 
 header h1 {
   margin-bottom: 10px;
+}
+
+.typing-text {
   font-size: 2.5em;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #3a6cf4;
+  width: fit-content;
+  margin: auto;
 }
 
 header p {
