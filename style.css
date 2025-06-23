@@ -22,6 +22,14 @@ body::before {
   z-index: -1;
 }
 
+#star-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+
 header {
   text-align: center;
   padding: 40px 20px 20px;
