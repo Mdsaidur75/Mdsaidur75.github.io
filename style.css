@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+.links a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #0066cc;
+  font-weight: bold;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+main section {
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #888;
+}
