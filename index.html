@@ -7,44 +7,42 @@
 </head>
 <body>
 
-  <div class="content">
-    <header>
-      <h1 class="typing-text">Md Saidur Rahman</h1>
-      <p>Computer Science Major at Michigan State University</p>
-      <div class="links">
-        <a href="https://www.linkedin.com/in/md-saidur-rahman-4713b825b/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/Mdsaidur75" target="_blank">GitHub</a>
-        <a href="my_resume.pdf" class="button" target="_blank">Resume</a>
-      </div>
-    </header>
+  <header>
+    <h1 class="typing-text">Md Saidur Rahman</h1>
+    <p>Computer Science Major at Michigan State University</p>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/md-saidur-rahman-4713b825b/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Mdsaidur75" target="_blank">GitHub</a>
+      <a href="my_resume.pdf" class="button" target="_blank">Resume</a>
+    </div>
+  </header>
 
-    <main>
-      <section>
-        <h2>About Me</h2>
-        <p>Hello! I’m Md Saidur Rahman, a Computer Science student at Michigan State University. I enjoy building software, exploring new tech, and solving interesting problems. I'm passionate about continuous learning and creative coding.</p>
-      </section>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>Hello! I’m Md Saidur Rahman, a Computer Science student at Michigan State University. I enjoy building software, exploring new tech, and solving interesting problems. I'm passionate about continuous learning and creative coding.</p>
+    </section>
 
-      <section>
-        <h2>Resume</h2>
-        <p>Click below to view or download my resume:</p>
-        <a href="my_resume.pdf" class="button" target="_blank">View My Resume (PDF)</a>
-      </section>
+    <section>
+      <h2>Resume</h2>
+      <p>Click below to view or download my resume:</p>
+      <a href="my_resume.pdf" class="button" target="_blank">View My Resume (PDF)</a>
+    </section>
 
-      <section>
-        <h2>Hobbies</h2>
-        <ul>
-          <li>🎮 Playing Games</li>
-          <li>📚 Reading Books</li>
-          <li>🎬 Watching Movies</li>
-          <li>✨ Favorite Series: <strong>Harry Potter</strong></li>
-        </ul>
-      </section>
-    </main>
+    <section>
+      <h2>Hobbies</h2>
+      <ul>
+        <li>🎮 Playing Games</li>
+        <li>📚 Reading Books</li>
+        <li>🎬 Watching Movies</li>
+        <li>✨ Favorite Series: <strong>Harry Potter</strong></li>
+      </ul>
+    </section>
+  </main>
 
-    <footer>
-      <p>&copy; 2025 Md Saidur Rahman</p>
-    </footer>
-  </div>
+  <footer>
+    <p>&copy; 2025 Md Saidur Rahman</p>
+  </footer>
 
   <!-- Floating Side Logos -->
   <div class="floating-logos">
@@ -58,4 +56,69 @@
     const text = "Md Saidur Rahman";
     let i = 0;
     const target = document.querySelector(".typing-text");
-    target.innerHTML = "
+    target.innerHTML = "";
+
+    function type() {
+      if (i < text.length) {
+        target.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 100);
+      }
+    }
+
+    type();
+  </script>
+
+  <!-- Star canvas behind everything -->
+  <canvas id="star-canvas"></canvas>
+
+  <script>
+    const canvas = document.getElementById('star-canvas');
+    const ctx = canvas.getContext('2d');
+    let stars = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+
+    function createStars(count) {
+      stars = [];
+      for (let i = 0; i < count; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 1.5,
+          speed: Math.random() * 0.5 + 0.2
+        });
+      }
+    }
+
+    function animateStars() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = 'white';
+      for (let star of stars) {
+        ctx.beginPath();
+        ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
+        ctx.fill();
+
+        star.y += star.speed;
+        if (star.y > canvas.height) {
+          star.y = 0;
+          star.x = Math.random() * canvas.width;
+        }
+      }
+      requestAnimationFrame(animateStars);
+    }
+
+    window.addEventListener('resize', () => {
+      resizeCanvas();
+      createStars(150);
+    });
+
+    resizeCanvas();
+    createStars(150);
+    animateStars();
+  </script>
+</body>
+</html>
