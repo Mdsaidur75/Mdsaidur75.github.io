@@ -104,6 +104,27 @@ footer {
   color: #aaa;
 }
 
+/* Footer icons */
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer-links img {
+  width: 24px;
+  height: 24px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.footer-links img:hover {
+  opacity: 1;
+}
+
 /* Side Logos */
 .floating-logos {
   position: fixed;
