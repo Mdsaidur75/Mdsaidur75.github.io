@@ -1,10 +1,16 @@
 body {
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
-  overflow-x: hidden;
+  padding: 0 20px;
+  max-width: 900px;
+  margin: auto;
+
+  background: url('shooting star.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #e4e4e4;
+  position: relative;
 }
 
-/* Parallax background */
 body::before {
   content: "";
   position: fixed;
@@ -12,34 +18,18 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('shooting star.jpg') no-repeat center center fixed;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  z-index: -2;
-  filter: brightness(0.5);
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: -1;
 }
 
-/* Star canvas */
 #star-canvas {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -1;
+  z-index: -2;
   pointer-events: none;
-}
-
-.content {
-  font-family: 'Segoe UI', sans-serif;
-  color: #e4e4e4;
-  max-width: 900px;
-  margin: auto;
-  padding: 0 20px;
-  position: relative;
-  z-index: 1;
 }
 
 header {
