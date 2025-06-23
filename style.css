@@ -43,3 +43,19 @@ footer {
   font-size: 0.9em;
   color: #888;
 }
+
+/* Resume and link button styling */
+.button {
+  display: inline-block;
+  margin: 10px 5px;
+  padding: 10px 15px;
+  background-color: #0066cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: #004a99;
+}
