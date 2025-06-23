@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="star-canvas"></canvas>
 
   <header>
     <h1 class="typing-text">Md Saidur Rahman</h1>
@@ -70,7 +69,9 @@
     type();
   </script>
 
-  <!-- Floating stars background -->
+  <!-- Star canvas behind everything -->
+  <canvas id="star-canvas"></canvas>
+
   <script>
     const canvas = document.getElementById('star-canvas');
     const ctx = canvas.getContext('2d');
