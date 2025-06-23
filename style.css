@@ -5,7 +5,7 @@ body {
   max-width: 900px;
   margin: auto;
 
-  background: url('shooting star.png') no-repeat center center fixed;
+  background: url('shooting star.jpg') no-repeat center center fixed;
   background-size: cover;
   color: #e4e4e4;
   position: relative;
@@ -35,10 +35,6 @@ body::before {
 header {
   text-align: center;
   padding: 40px 20px 20px;
-}
-
-header h1 {
-  margin-bottom: 10px;
 }
 
 .typing-text {
@@ -97,32 +93,68 @@ ul {
   padding-left: 0;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  color: #aaa;
+/* Wavy footer */
+.wave-container {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  background: transparent;
+  z-index: 1;
 }
 
-/* Footer icons */
+.wave-container svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: rotate(180deg);
+}
+
+.wave-container path {
+  fill: #1c1c2d;
+  animation: waveMove 8s ease-in-out infinite alternate;
+}
+
+@keyframes waveMove {
+  0% {
+    d: path("M0,30 C300,90 900,0 1200,30 L1200,0 L0,0 Z");
+  }
+  100% {
+    d: path("M0,20 C300,60 900,10 1200,20 L1200,0 L0,0 Z");
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #1c1c2d;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.3);
+}
+
 .footer-links {
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .footer-links a {
-  margin: 0 10px;
+  margin: 0 15px;
   display: inline-block;
 }
 
 .footer-links img {
-  width: 24px;
-  height: 24px;
-  opacity: 0.8;
-  transition: opacity 0.3s;
+  width: 28px;
+  height: 28px;
+  opacity: 0.85;
+  transition: transform 0.3s ease;
 }
 
 .footer-links img:hover {
   opacity: 1;
+  transform: scale(1.1);
 }
 
 /* Side Logos */
