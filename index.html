@@ -7,7 +7,7 @@
 </head>
 <body>
   <header>
-    <h1>Md Saidur Rahman</h1>
+    <h1 class="typing-text">Md Saidur Rahman</h1>
     <p>Computer Science Major at Michigan State University</p>
     <div class="links">
       <a href="https://www.linkedin.com/in/md-saidur-rahman-4713b825b/" target="_blank">LinkedIn</a>
@@ -49,5 +49,23 @@
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" title="C++">
     <img src="https://img.icons8.com/ios-filled/50/ffffff/nerd.png" alt="Nerd" title="Nerd Mode">
   </div>
+
+  <!-- Typing animation script -->
+  <script>
+    const text = "Md Saidur Rahman";
+    let i = 0;
+    const target = document.querySelector(".typing-text");
+    target.innerHTML = "";
+
+    function type() {
+      if (i < text.length) {
+        target.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 100);
+      }
+    }
+
+    type();
+  </script>
 </body>
 </html>
