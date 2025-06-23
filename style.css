@@ -1,35 +1,63 @@
 body {
-  font-family: sans-serif;
-  background-color: #f5f7fa;
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #1e1e2f;
+  color: #e4e4e4;
   margin: 0;
-  padding: 20px;
-  max-width: 800px;
+  padding: 0 20px;
+  max-width: 900px;
   margin: auto;
 }
 
 header {
   text-align: center;
-  padding: 20px;
+  padding: 40px 20px 20px;
 }
 
 header h1 {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 2.5em;
 }
 
-.links a {
-  margin: 0 10px;
+header p {
+  font-size: 1.2em;
+  color: #ccc;
+}
+
+.links {
+  margin-top: 15px;
+}
+
+.links a,
+.button {
+  display: inline-block;
+  margin: 6px;
+  padding: 10px 16px;
+  background-color: #3a6cf4;
+  color: white;
   text-decoration: none;
-  color: #0066cc;
+  border-radius: 8px;
   font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.links a:hover {
-  text-decoration: underline;
+.links a:hover,
+.button:hover {
+  background-color: #264dc5;
 }
 
 main section {
-  margin-bottom: 30px;
+  background-color: #2a2a3d;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+main h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 5px;
 }
 
 ul {
@@ -39,23 +67,7 @@ ul {
 
 footer {
   text-align: center;
-  margin-top: 40px;
+  padding: 20px;
   font-size: 0.9em;
-  color: #888;
-}
-
-/* Resume and link button styling */
-.button {
-  display: inline-block;
-  margin: 10px 5px;
-  padding: 10px 15px;
-  background-color: #0066cc;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.button:hover {
-  background-color: #004a99;
+  color: #aaa;
 }
